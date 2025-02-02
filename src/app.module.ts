@@ -5,10 +5,13 @@ import { TokenModule } from './token/token.module';
 import { RoleModule } from './role/role.module';
 import { AuthModule } from './auth/auth.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { ProductsModule } from './products/products.module';
+import { CategoriesModule } from './categories/categories.module';
+import { TransactionsModule } from './transactions/transactions.module';
 
 
 @Module({
-  imports: [UsersModule, TokenModule, RoleModule, AuthModule, PrismaModule],
+  imports: [UsersModule, TokenModule, RoleModule, AuthModule, PrismaModule, ProductsModule, CategoriesModule, TransactionsModule],
   controllers: [],
   providers: [],
 })
