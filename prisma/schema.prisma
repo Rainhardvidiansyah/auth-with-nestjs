@@ -53,5 +53,19 @@ model UsersRole{
   @@id([userId, roleId])
 }
 
+model Product {
+  id           Int      @id @default(autoincrement())
+  product_name String
+  price        Float
+  description  String?
+  stock        Int
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+  deleted_at   DateTime?
+
+  @@map("products") // untuk memberi nama tabel di database
+}
+
+
  
 
